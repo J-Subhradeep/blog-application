@@ -12,23 +12,25 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NavigationsComponent } from './navigations/navigations.component';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { IconDefinition } from '@ant-design/icons-angular';
-import { AccountBookFill, AlertFill, AlertOutline } from '@ant-design/icons-angular/icons';
 import { HttpClientModule } from '@angular/common/http';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-
-
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { RouterModule } from '@angular/router';
 
 // const icons: IconDefinition[] = [AccountBookFill, AlertOutline, AlertFill];
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    NavigationsComponent
+    NavigationsComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -44,7 +46,9 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
     // NzIconModule.forRoot(icons),
     HttpClientModule,
     NzButtonModule,
-    NzLayoutModule
+    NzLayoutModule,
+    NzTypographyModule,
+    NzResultModule
   ],
   exports: [
     NavbarComponent,

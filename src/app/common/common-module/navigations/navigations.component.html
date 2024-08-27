@@ -3,8 +3,12 @@
         <button nz-button nzType="text" nzShape="circle" (click)="open()">
             <i nz-icon nzType="menu" nzTheme="outline"></i>
         </button>
-        <span class="navbar-title">Spyder Blogs</span>
-        <span nz-icon nzType="form" nzTheme="outline" style="font-size: 20px;"></span>
+        <span nz-icon nzType="file-sync" nzTheme="outline" style="font-size: 37px;margin-left: 20px; margin-right: 10px;"></span>
+        <div style="display: grid; grid-template-rows: 1fr 1fr; grid-gap: 0; justify-content: space-around;" >
+
+            <span class="navbar-title">CatchUp Sync</span>
+            <span nz-typography nzType="secondary">The Ultimate Project Management Tool</span>
+        </div>
     </div>
     <div class="navbar-right">
         <button nz-button nzType="text">Login</button>
@@ -13,7 +17,7 @@
 </div>
 
 
-<nz-drawer [nzClosable]="true" [nzVisible]="visible" nzPlacement="left" nzTitle="Spyder Blogs" [nzWidth]="300" 
+<nz-drawer [nzClosable]="true" [nzVisible]="visible" nzPlacement="left" nzTitle="CatchUp Sync" [nzWidth]="300" 
     (nzOnClose)="close()">
     <ng-container *nzDrawerContent>
         <ul *ngFor="let group of navigation" nz-menu nzMode="inline" [nzSelectable]="true">

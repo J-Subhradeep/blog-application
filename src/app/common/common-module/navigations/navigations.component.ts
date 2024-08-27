@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationList } from './interfaces/NavigationList';
 import { Navigation } from './interfaces/Navigation';
+import { navigation } from './static_data/StaticData';
 
 @Component({
   selector: 'app-navigations',
@@ -19,62 +20,6 @@ export class NavigationsComponent {
     this.visible = false;
   }
 
-  navigation: Array<NavigationList<Navigation>> = [
-    {
-      title: "Dashboard",
-      icon: "project",
-      hasChildren: false,
-      link: "/dashboard",
-      children: []
-
-    },
-    {
-      title: "Feeds",
-      icon: "reload",
-      hasChildren: false,
-      link: "/feeds",
-      children: []
-
-    }
-
-    ,
-    {
-      title: "Manage Profile",
-      icon: "user",
-      hasChildren: true,
-      children: [
-        {
-          title: "Edit Profile",
-          link: ""
-        },
-        {
-          title: "Delete Profile",
-          link: ""
-        }
-      ]
-
-    },
-
-    {
-      title: "Manage Blogs",
-      icon: "edit",
-      hasChildren: true,
-      children: [
-        {
-          title: "Post Blog",
-          link: ""
-        },
-        {
-          title: "Edit Blog",
-          link: ""
-        },
-        {
-          title: "Blog Analytics",
-          link: ""
-        }
-      ]
-
-    }
-  ]
+  navigation: Array<NavigationList<Navigation>> = navigation
 
 }
