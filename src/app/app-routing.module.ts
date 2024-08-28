@@ -6,7 +6,13 @@ import { LoginComponentComponent } from './auth/auth/login-component/login-compo
 import { NotFoundComponent } from './common/common-module/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponentComponent, pathMatch: "full" },
+  
+  {
+    path: 'auth',
+    // canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./auth/auth/auth.module').then((m) => m.AuthModule),
+  },
   { path: 'dashboard', component: NavigationsComponent },
   { path: '**', component: NotFoundComponent },
 ];

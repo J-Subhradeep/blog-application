@@ -1,0 +1,22 @@
+.register-form {
+    width: 400px;
+  }
+  
+  .register-form-margin {
+    margin-bottom: 16px;
+  }
+  
+  .register-form-forgot {
+    float: right;
+  }
+  
+  .register-form-button {
+    width: 100%;
+  }
+  .register-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  

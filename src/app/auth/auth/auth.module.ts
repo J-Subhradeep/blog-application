@@ -6,21 +6,31 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { RegistrationComponentComponent } from './registration-component/registration-component.component';
+import { AuthMainComponent } from './auth-main/auth-main.component';
+import { routes } from './Auth.routing';
+
 
 
 @NgModule({
   declarations: [
-    LoginComponentComponent
+    LoginComponentComponent,
+    RegistrationComponentComponent,
+    AuthMainComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule.forChild(routes),
     ReactiveFormsModule,
     NzFormModule,
     NzCardModule,
     NzInputModule,
     NzButtonModule,
+  ],
+
+  exports:[
+    RouterModule
   ]
 })
 export class AuthModule { }
